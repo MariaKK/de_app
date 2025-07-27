@@ -1,4 +1,4 @@
-* This project is for the fetching, storaging anf vizualizing data.
+# This project is for the fetching, storaging anf vizualizing data.
 There is three services:
 
 - `fetcher` — service that download data from the outer API and save it to the PosgreSQL DBс
@@ -7,7 +7,7 @@ There is three services:
 Services are containerized with Docker for easier deployment.
 
 
-* Requirements
+## Requirements
 - Internet access
 - Docker (v20.10+)
 - Docker Compose (v2.4+)
@@ -15,7 +15,7 @@ Services are containerized with Docker for easier deployment.
 - ports `8050` and `5432` mustn't be in use
 
 
-* Environment variables 
+## Environment variables 
 Before running the program nessessary to create .env file in the project' root
 
 ```dotenv
@@ -29,7 +29,7 @@ DB_NAME=myapp_db
 DB_USER=myapp_user
 DB_PASS=myapp_password
 
-* Build and run
+## Build and run
 Clone the repository
 
 git clone <URL-of-repository>
@@ -37,7 +37,7 @@ cd <project-folder>
 Create .env file:
 cp .env.example .env
 
-* Edit if needed 
+## Edit if needed 
 Build and run services:
 docker-compose up --build
 
@@ -47,7 +47,7 @@ PostgreSQL listens to localhost:5432
 
 Dash-interface is available on http://localhost:8050
 
-🛠 Project structure
+## Project structure
 
 ├── docker-compose.yml
 ├── .env
@@ -58,7 +58,7 @@ Dash-interface is available on http://localhost:8050
 └── README.md
 
 
-* Restart
+## Restart
 If containers has stopped:
 docker-compose start
 
@@ -66,14 +66,14 @@ For full restart:
 docker-compose down -v
 docker-compose up --build
 
-** Notes
+### Notes
 
 Database is located in volume postgres-data
 
 A healthcheck is used here, for: the fetcher and visualizer wait until PostgreSQL is ready.
 The Dash application won’t start if the database is unavailable.
 
-***Notes for vizualization
+###Notes for vizualization
 Sorting was added. Also was added a filter for searching conveniece.
 
 
