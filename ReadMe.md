@@ -27,7 +27,7 @@ DB_HOST=postgres
 DB_PORT=5432
 DB_NAME=myapp_db
 DB_USER=myapp_user
-DB_PASS=myapp_password
+DB_PASS=myapp_password```
 
 ## Build and run
 Clone the repository
