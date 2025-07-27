@@ -77,7 +77,7 @@ Database is located in volume postgres-data
 A healthcheck is used here, for: the fetcher and visualizer wait until PostgreSQL is ready.
 The Dash application won’t start if the database is unavailable.
 
-###Notes for vizualization
+### Notes for vizualization
 Sorting was added. Also was added a filter for searching conveniece.
 
 
