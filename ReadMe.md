@@ -40,7 +40,8 @@ cp .env.example .env
 
 ## Edit if needed 
 Build and run services:
-docker-compose up --build
+```docker-compose up --build
+```
 
 Check everything is working:
 
@@ -50,22 +51,24 @@ Dash-interface is available on http://localhost:8050
 
 ## Project structure
 
-├── docker-compose.yml
+```├── docker-compose.yml
 ├── .env
 ├── fetcher/
 │   └── ... (fetching and saving code in DB)
 ├── visualizer/
 │   └── ... (Dash-app code)
 └── README.md
-
+```
 
 ## Restart
 If containers has stopped:
-docker-compose start
+```docker-compose start
+```
 
 For full restart:
-docker-compose down -v
+```docker-compose down -v
 docker-compose up --build
+```
 
 ### Notes
 
